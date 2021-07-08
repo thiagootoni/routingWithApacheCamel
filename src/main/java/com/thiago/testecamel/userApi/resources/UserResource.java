@@ -25,6 +25,7 @@ public class UserResource {
 	
 	@GetMapping(value = "/{userName}")
 	public ResponseEntity<UserDto> findByName(@PathVariable String userName){
+		
 		System.out.println("Chegou na api de usuário: Buscando por " + userName);
 		return ResponseEntity.ok(this.service.findByName(userName));
 	}
